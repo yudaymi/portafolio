@@ -1,0 +1,524 @@
+/* ==================================================
+   ACCESO PROFESIONAL AL BLOG — TEMA OSCURO
+================================================== */
+
+html,
+body {
+    background: #000000;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+}
+
+.blog-showcase {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    gap: 55px;
+
+    width: 100%;
+    margin-top: 40px;
+    padding: 50px;
+
+    background:
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(37, 99, 235, 0.18),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #000000,
+            #050505
+        );
+
+    border: 1px solid #262626;
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5);
+
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* LÍNEA SUPERIOR */
+
+.blog-showcase::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #1d4ed8,
+        #2563eb,
+        #0ea5e9
+    );
+}
+
+
+/* DECORACIÓN */
+
+.blog-showcase::after {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    right: -190px;
+    bottom: -200px;
+
+    border: 1px solid #1e3a8a;
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   INFORMACIÓN IZQUIERDA
+================================================== */
+
+.blog-showcase-info {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ETIQUETA */
+
+.blog-badge {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+    padding: 8px 13px;
+
+    background: #080808;
+    color: #ffffff;
+
+    border: 1px solid #262626;
+    border-radius: 30px;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.blog-badge i {
+    color: #1d4ed8;
+}
+
+
+/* PROYECTO / BLOG */
+
+.blog-project-number {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #1d4ed8;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+
+/* TÍTULO */
+
+.blog-showcase-info h3 {
+    margin: 0 0 20px;
+
+    color: #ffffff;
+
+    font-size: 42px;
+    font-weight: 800;
+
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+}
+
+
+.blog-showcase-info h3 span {
+    display: block;
+
+    color: #1d4ed8;
+}
+
+
+/* DESCRIPCIÓN */
+
+.blog-showcase-info > p {
+    max-width: 500px;
+
+    margin: 0 0 25px;
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   TECNOLOGÍAS
+================================================== */
+
+.blog-tech {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 30px;
+}
+
+
+.blog-tech span {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 11px;
+
+    background: #080808;
+    color: #ffffff;
+
+    border: 1px solid #262626;
+    border-radius: 5px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.blog-tech span i {
+    color: #1d4ed8;
+
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   BOTÓN ACCEDER AL BLOG
+================================================== */
+
+.blog-main-button {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+
+    padding: 13px 16px 13px 20px;
+
+    background: #1d4ed8;
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 10px 25px rgba(29, 78, 216, 0.35);
+
+    transition: all 0.3s ease;
+}
+
+
+.blog-main-button > span {
+    display: flex;
+    flex-direction: column;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    line-height: 1.3;
+}
+
+
+.blog-main-button small {
+    margin-top: 2px;
+
+    color: #bfdbfe;
+
+    font-size: 9px;
+    font-weight: 500;
+}
+
+
+.blog-main-button > i {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    transition: transform 0.3s ease;
+}
+
+
+.blog-main-button:hover {
+    background: #163ba8;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 32px rgba(29, 78, 216, 0.45);
+}
+
+
+.blog-main-button:hover > i {
+    transform: translate(2px, -2px);
+}
+
+
+/* ==================================================
+   PRESENTACIÓN DERECHA — FOTO
+================================================== */
+
+.blog-visual {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px 35px;
+}
+
+
+/* MARCO DE LA FOTO — TAMAÑO NATURAL DE LA IMAGEN */
+
+.blog-photo-frame {
+    position: relative;
+
+    display: inline-block;
+
+    max-width: 100%;
+
+    padding: 8px;
+
+    background: #000000;
+
+    border: 3px solid #1d4ed8;
+    border-radius: 14px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.55),
+        0 0 0 8px rgba(37, 99, 235, 0.08);
+
+    transition: transform 0.4s ease;
+}
+
+.blog-showcase:hover .blog-photo-frame {
+    transform: translateY(-4px);
+}
+
+
+/* IMAGEN */
+
+.blog-photo-frame img {
+    max-width: 100%;
+    max-height: 420px;
+
+    display: block;
+
+    border-radius: 8px;
+}
+
+
+/* ==================================================
+   PROYECTO DISPONIBLE
+================================================== */
+
+.blog-floating-card {
+    position: absolute;
+
+    right: 6px;
+    bottom: 12px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 16px;
+
+    background: #080808;
+
+    border: 1px solid #262626;
+    border-radius: 8px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+
+.blog-floating-card > div {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #1d4ed8;
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+}
+
+
+.blog-floating-card span {
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.blog-floating-card small {
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 8px;
+    font-weight: 500;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .blog-showcase {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 40px;
+    }
+
+
+    .blog-showcase-info {
+        text-align: center;
+    }
+
+
+    .blog-badge,
+    .blog-main-button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .blog-showcase-info > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .blog-tech {
+        justify-content: center;
+    }
+
+
+    .blog-visual {
+        max-width: 650px;
+
+        width: 100%;
+
+        margin: auto;
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 600px) {
+
+    .blog-showcase {
+        padding: 30px 20px;
+
+        border-radius: 12px;
+    }
+
+
+    .blog-showcase-info h3 {
+        font-size: 31px;
+    }
+
+
+    .blog-main-button {
+        width: 100%;
+
+        justify-content: space-between;
+    }
+
+
+    .blog-visual {
+        padding: 10px 0 40px;
+    }
+
+
+    .blog-photo-frame img {
+        max-height: 280px;
+    }
+
+
+    .blog-floating-card {
+        right: 0;
+        bottom: -10px;
+    }
+
+}
