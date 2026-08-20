@@ -24,6 +24,7 @@ body {
     gap: 55px;
 
     width: 100%;
+    max-width: 1200px;
     margin-top: 40px;
     padding: 50px;
 
@@ -433,10 +434,13 @@ body {
 
 
 /* ==================================================
-   TABLET
+   TABLET / CELULAR
+   (antes cambiaba a 1 columna desde 900px,
+   ahora solo cambia desde 700px para que la foto
+   se mantenga a la derecha en más tamaños de pantalla)
 ================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
 
     .blog-showcase {
         grid-template-columns: 1fr;
@@ -482,10 +486,10 @@ body {
 
 
 /* ==================================================
-   CELULAR
+   CELULAR PEQUEÑO
 ================================================== */
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
 
     .blog-showcase {
         padding: 30px 20px;
