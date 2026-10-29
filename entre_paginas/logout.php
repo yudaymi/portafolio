@@ -1,0 +1,1 @@
+<?php require 'app/init.php';session_destroy();go();
